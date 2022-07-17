@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+:root {
+  --gray: rgb(51, 51, 51);
+  --trebuchet: "Trebuchet MS", "Lucinda Grande", Verdana, Geneva, Tahoma, sans-serif;
+  --wrong: #f55951;
+  --blue: #9fa8da;
+  --righteous: "Righteous", cursive;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--gray);
+}
+
+#app {
+  font-family: var(--trebuchet);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 100px;
+}
+
+.question-area h1 {
+  color: white;
+  font-family: var(--righteous);
+}
+
+.question-area h2 {
+  background-color: black;
+  font-family: var(--righteous);
+
+  height: auto;
+  padding: 20px;
+  border-radius: 8px;
+  color: #f1e8e6;
+}
+
+.questions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.question-box {
+  background-color: #f1e8e6;
+  color: rgb(164, 164, 164);
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin: 15px;
+  min-width: 300px;
+  height: auto;
+  padding-top: 50px;
+}
+
+.question-box.correct {
+  background-color: rgb(75, 134, 111);
+  color: white;
+}
+
+.question-box.wrong {
+  background-color: var(--wrong);
+  color: white;
+}
+
+.question-box h1 {
+  text-align: left;
+}
+
+.questions-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--blue);
+  min-width: 100px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.question-button:disabled {
+  background-color: rgb(121, 121, 121);
+  color: rgb(134, 134, 134);
+}
+
+.answer-display {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-display.correct {
+  color: rgb(211, 211, 117);
+}
+
+.answer-display.wrong {
+  color: rgb(211, 134, 117);
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
